@@ -10,46 +10,55 @@
     --background-filter-color: #F5F4FA;
     --background-crew-color: #F5F4FA;
     --background-card-color: #EEEEEE;
+    --filter-text: #212121;
 }
 
 body {
     background-color: var(--background-main-color);
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
 }
 
 /*Header*/
 /*Logo*/
-.logo {
+.logo  {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
     color: var(--accent-color)
-}
-.web-logo {
-    color: var(--accent-color);
 }
 .studio-logo {
     color: var(--logo-header-color);
 }
 
 /*Menu*/
-.menu {
+.menu,
+.contacts,
+.speciality,
+.crew,
+.feature,
+.filter,
+.store,
+.footer-address {
+    list-style: none;
+}
+.link {
     color: var(--primary-h-color);
     font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
-    list-style-type: none;
     text-decoration: none;
 }
 .current,
-.link: :hover,
-.link: :focus,
-.contacts: :hover,
-.contacts: :focus
+.link:hover,
+.link:focus,
+.contacts:hover,
+.contacts:focus
 {
-    color: var(--accent-color);
+    color: var(--accent-color);   
 }
 
 /*Main*/
@@ -58,46 +67,58 @@ body {
     }
 .hero-title {
     color: var(--text-on-dark-color);
-    font-size: 44px;
     font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 .hero-button {
     background-color: var(--accent-color);
     color: var(--text-on-dark-color);
     font-weight: 700;
-    font-size: 16px;
+    line-height: 1.9;
     letter-spacing: 0.06em;
-    text-align: center;
+    cursor: pointer;
 }
-.hero-button:active {
+.hero-button:active,
+.hero-button:hover,
+.hero-button:focus {
     background-color: var(--background-active-button);
-}
+} /*Чому буває таке, що при правильно написаному коді він не завжди працює? Наприклад, тут в мене до перезагрузки vs code працювао тільки через .hero-button:active:hover:focus і то тільки active, хоча, можливо, я хувер не помітила*/
 
 /*Особливості*/
 .hidden {
     visibility: hidden;
 }
-.third-title {
+.feature-title {
     color: var(--primary-h-color);
     font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+.feature-txt {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    }
 
 /*Чим ми займаємося*/
 .headline {
     color: var(--primary-h-color);
     font-weight: 700;
     font-size: 36px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 
 /*Наша команда*/
-.crew-section{
-   background-color: ver(--background-crew-color); 
+.crew-section {
+    background-color: var(--background-crew-color);
 }
 .crew-card {
     background-color: ver(--background-main-color);
@@ -105,50 +126,54 @@ body {
 .card-title {
     color: var(--primary-h-color);
     font-weight: 500;
-    font-size: 16px;
+    line-height: 1.19;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 .card-paragraph {
-    font-size: 16px;
+    line-height: 1.19;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 
-
-
-footer {
+/*FOOTER*/
+.footer {
     background-color: var(--background-secondary-color);
     color: var(--text-on-dark-color);
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.3em;
-    list-style-type: none;
-    text-decoration: none;
+    font-family: 'Roboto', sans-serif;      
 }
 .footer-logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--text-on-dark-color)
-}
-.adress {
     color: var(--text-on-dark-color);
 }
+.address {
+    font-style: normal;
+    color: var(--text-on-dark-color);
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
 .opacity {
-    color: #ffffff99;
+    color: #ffffff99; /*Як написати опасіті в hex через ver(--)? я шукала в інтернеті і не знайшла 😕*/
 }
 
 
 /*PORTFOLIO*/
-
+.filter {
+    display: inline;
+}
 .filter-button {
     background-color: var(--background-filter-color);
-    color: var(--primary-h-color);
+    color: var(--filter-text);
     font-weight: 500;
-    font-size: 16px;
+    line-height: 1.6;
     letter-spacing: 0.03em;
-    text-align: center;
+    text-align: center; /*чому тут центрувати не потрібно? ви казали в перевірці, але поки не видаляю*/
+    cursor: pointer;
 }
-.filter-button:active {
+.filter-button:active,
+.filter-button:hover,
+.filter-button:focus {
     background-color: var(--accent-color);
     color: var(--text-on-dark-color);
 }
@@ -160,9 +185,10 @@ footer {
     color: var(--primary-h-color);
     font-weight: 700;
     font-size: 18px;
+    line-height: 2;
     letter-spacing: 0.06em;
 }
 .store-text {
-    font-size: 16px;
+    line-height: 1.9;
     letter-spacing: 0.03em;
 }
