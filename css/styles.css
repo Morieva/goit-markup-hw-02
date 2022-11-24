@@ -12,15 +12,32 @@
     --background-card-color: #EEEEEE;
     --filter-text: #212121;
 }
-
+/*======================Global==============*/
 body {
     background-color: var(--background-main-color);
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
 }
 
-/*Header*/
-/*Logo*/
+.link {
+    text-decoration: none;
+}
+.current,
+.link:hover,
+.link:focus {
+    color: var(--accent-color);
+}
+.list {
+    list-style: none;
+}
+.button {
+    cursor: pointer;
+}
+/*======================Global==============*/
+
+
+/*=========Header=========*/
+/*===Logo===*/
 .logo  {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -29,39 +46,26 @@ body {
     letter-spacing: 0.03em;
     color: var(--accent-color)
 }
-.studio-logo {
+.menu-logo {
     color: var(--logo-header-color);
 }
+/*===Logo===*/
+/*=========Header=========*/
 
-/*Menu*/
-.menu,
-.contacts,
-.speciality,
-.crew,
-.feature,
-.filter,
-.store,
-.footer-address {
-    list-style: none;
-}
-.link {
+/*=========Menu==========*/
+.nav-link,
+.contacts-link {
     color: var(--primary-h-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration: none;
 }
-.current,
-.link:hover,
-.link:focus,
-.contacts:hover,
-.contacts:focus
-{
-    color: var(--accent-color);   
-}
+/*=========Menu==========*/
+/*======================Global==============*/
 
-/*Main*/
+
+/*========Index-Main===========*/
 .hero {
     background-color: var(--background-secondary-color);
     }
@@ -94,7 +98,6 @@ body {
 }
 .feature-title {
     color: var(--primary-h-color);
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -135,31 +138,12 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
 }
-
-/*FOOTER*/
-.footer {
-    background-color: var(--background-secondary-color);
-    color: var(--text-on-dark-color);
-    font-family: 'Roboto', sans-serif;      
-}
-.footer-logo {
-    color: var(--text-on-dark-color);
-}
-.address {
-    font-style: normal;
-    color: var(--text-on-dark-color);
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-}
-.opacity {
-    color: #ffffff99; /*Як написати опасіті в hex через ver(--)? я шукала в інтернеті і не знайшла 😕*/
-}
+/*========Index-Main===========*/
 
 
-/*PORTFOLIO*/
-.filter {
+/*===========Portfolio-Main==============*/
+/*======Filter======*/
+.filter-item {
     display: inline;
 }
 .filter-button {
@@ -168,8 +152,6 @@ body {
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.03em;
-    text-align: center; /*чому тут центрувати не потрібно? ви казали в перевірці, але поки не видаляю*/
-    cursor: pointer;
 }
 .filter-button:active,
 .filter-button:hover,
@@ -177,7 +159,9 @@ body {
     background-color: var(--accent-color);
     color: var(--text-on-dark-color);
 }
+/*=======Filter========*/
 
+/*======Store=========*/
 .store-card {
     background-color: ver(--background-card-color);
 }
@@ -192,3 +176,31 @@ body {
     line-height: 1.9;
     letter-spacing: 0.03em;
 }
+/*======Store=========*/
+/*===========Portfolio-Main==============*/
+
+
+/*===================FOOTER==================*/
+.footer {
+    background-color: var(--background-secondary-color);
+    color: var(--text-on-dark-color);
+    font-family: 'Roboto', sans-serif;
+}
+.footer-logo {
+    color: var(--text-on-dark-color);
+}
+.location-item {
+    font-style: normal; /*Але для чого якщо в інструментах розробника він і так там приписаний через address-item*/
+}
+.address-item {
+    font-style: normal;
+    color: var(--text-on-dark-color);
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+.opacity {
+    color: #ffffff99;
+    /*Як написати опасіті в hex через ver(--)? я шукала в інтернеті і не знайшла 😕*/
+}
+/*===================FOOTER==================*/
